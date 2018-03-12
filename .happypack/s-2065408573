@@ -1,0 +1,41 @@
+'use strict';
+
+var _svg4everybody = require('svg4everybody');
+
+var _svg4everybody2 = _interopRequireDefault(_svg4everybody);
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)(function () {
+	(0, _svg4everybody2.default)();
+});
+
+/* Параллакс */
+window.addEventListener('scroll', function () {
+	var depth = void 0;
+	var i = void 0;
+	var translate3d = void 0;
+	var movement = void 0;
+	var topDistance = this.pageYOffset;
+	var balls = document.querySelectorAll('[data-type="parallax"]');
+	for (i = 0; i < balls.length; i++) {
+		var ball = balls[i];
+		depth = ball.getAttribute('data-depth');
+		movement = -(topDistance * depth);
+		translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+		ball.style['-webkit-transform'] = translate3d;
+		ball.style['-moz-transform'] = translate3d;
+		ball.style['-ms-transform'] = translate3d;
+		ball.style['-o-transform'] = translate3d;
+		ball.style.transform = translate3d;
+	}
+});
+/* /Параллакс */
+
+/* Плавное появление блоков */
+
+/* /Плавное появление блоков */

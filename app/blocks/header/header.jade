@@ -1,0 +1,40 @@
+mixin header()
+	+b.header&attributes(attributes)
+		block
+		// Header Top
+		.header__top
+			.header__title.inn-padd Итальянский специализированный бренд по производству посудомоечных машин
+			img.header__logo-img(src='images/logo.png')
+			.header__top-bg-container
+				.header__top-bg.bg-round
+		// Header Bottom
+		.header__bottom.inn-padd
+			// Текст
+			.header__bottom-title.site-width Какой способ вы выберете, 
+				br 
+				| чтобы помыть
+				span.header__bottom-title-round-number 14 
+				|  комплектов посуды?
+			// Колонки
+			.cols.cols__header.site-width.inn-padd
+				.col.col-left.col__header
+					.col__header-img
+						img.col__header-img-picture(src='images/header__tradition.png')
+					.col__header-text Мойка посуды
+						br
+						| традиционным способом
+				.col.col-center.col__header
+					.col__dotted
+				.col.col-right.col__header
+					.col__header-img
+						img.col__header-img-picture(src='images/header__machine.png')
+					.col__header-text Мойка посуды
+						br
+						| в посудомоечной машине
+						strong *Flavia
+		// Бэкграунд
+		mixin bgRoundBlue(customClass)
+			.header__bg(class= customClass)
+				.header__bg-round.bg-round
+				.header__bg-round-lite.bg-round
+		+bgRoundBlue('')

@@ -1,0 +1,42 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		block
+		//- Footer
+		.footer-outer
+			.footer-inner
+				+bgRoundBlue('footer__bg')
+				.footer-inner__text-top
+					.footer-inner__text-top-1 По европейским стандартам:
+					.footer-inner__text-top-2 
+						strong 1 комплект посуды включает: 
+						| 11 предметов на каждую обедающую персону
+				// Блок с изображениями
+				.footer-inner__images
+					.footer-inner__images-item
+						.footer-inner__image-item-image
+							img.footer-inner__image-item-image-img.footer__lojka(src='images/footer__lojka.png')
+						.footer-inner__images-item-txt 3 ложки, 1 вилку, 1 нож
+					.footer-inner__images-item
+						.footer-inner__image-item-image
+							img.footer-inner__image-item-image-img.footer__tarelka(src='images/footer__tarelka.png')
+						.footer-inner__images-item-txt 3 тарелки
+					.footer-inner__images-item
+						.footer-inner__image-item-image
+							img.footer-inner__image-item-image-img.footer__glass(src='images/footer__glass.png')
+						.footer-inner__images-item-txt 1 стакан
+					.footer-inner__images-item
+						.footer-inner__image-item-image
+							img.footer-inner__image-item-image-img.footer__cup(src='images/footer__cup.png')
+						.footer-inner__images-item-txt 1 чашка с блюдцем
+				// /Блок с изображениями
+				.footer-inner__text-bottom.site-width Если необходимо помыть меньшее количество посуды, можно активировать
+					strong программу неполной загрузки 
+					| для меньшего расхода воды и моющих средств.				
+			.footer-note * На примере посудомоечной машины 
+					strong Flavia BI 60 Kaskata Light S
+			.footer-download
+				a(href='#').footer-download__btn
+					img.footer-download__btn-img(src='images/download.png')
+					.footer-download__btn-txt Скачать макеты для печати
+				a(href='https://flavia-rus.ru/catalog/').footer-download__btn.footer-download__btn-small
+					.footer-download__btn-txt Каталог FLAVIA

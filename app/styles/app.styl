@@ -1,0 +1,41 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+/* Библиотека анимаций */
+@import 'helpers/animate.css'
+/* /Библиотека анимаций */
+
+/* Глобальные стили */
+body
+	position relative
+	font-family Open Sans, sans-serif
+
+.site-width
+	margin auto
+	max-width $siteWidthInner
+	padding-left 10px
+	padding-right 10px
+
+.inn-padd
+	padding-left 10px
+	padding-right 10px
+
+strong
+	font-weight 600
+
+/* Круглые краницы */
+.bg-round
+	position absolute
+	left 50%
+	width 150%
+	height 300px
+	transform translateX(-50%)
+	border-radius 50%
+
+
+/* /Глобальные стили */
+
+import('../blocks/**/*')

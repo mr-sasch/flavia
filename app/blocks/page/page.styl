@@ -1,0 +1,268 @@
+/* Контент */
+.content__item
+	margin auto
+	display block
+	font-size 15px
+	text-align justify
+
+.content__item:after
+	display inline-block
+	width 100%
+	content ''
+
+
+	/* Разделитель */
+.content__separator
+	margin 20px 0
+	height 60px
+	text-align center
+
+.col__dotted-separator
+	display inline-block
+	/* /Разделитель */
+
+
+
+
+/* Центральный блок */
+.content__item-center
+	display inline-block
+	max-width 60%
+	text-align center
+
+.content__item-center-cent
+	position relative
+	margin 0 -4px
+	display inline-block
+	width 60%
+	text-align center
+	vertical-align middle
+
+.content__item-center-cent-img
+	width 100%
+
+.content__item-center-cent-txt
+	position absolute
+	top 45%
+	width 100%
+	height 50%
+
+.content__item-center-span
+	position absolute
+	top 50%
+	left 0
+	padding 0 80px
+	font-size 2em
+	text-align center
+	color #fff
+	transform translateY(-50%)
+
+.content__item-center-left,
+.content__item-center-right
+	display inline-block
+	width 20%
+	vertical-align middle
+
+.content__item-center-left-img,
+.content__item-center-right-img
+	width 100%
+
+.content__item-center-left
+	margin -1px
+
+/* /Центральный блок */
+
+/* Боковой блок */
+.content__item-side
+	margin-top -65px
+	display inline-block
+	width 100%
+	max-width 18%
+	text-align center
+	vertical-align middle
+
+.content__item-side-img
+	width 9.4em
+
+.content__item-side-text
+	position absolute
+	left 50%
+	width 100%
+	text-align center
+	transform translateX(-50%)
+
+.content__item-side-text-title
+	margin-top 22px
+	margin-bottom 4px
+	font-size 3em
+	font-weight 600
+
+.celsium
+	.content__item-side-text
+		display flex
+		flex-direction column
+		align-items center
+	.content__item-side-text-title-red
+		width 24vw
+
+.content__item-side-text-txt
+	margin-bottom 3px
+	font-size 2em
+	font-weight 600
+	color $greyColor
+
+.content__item-side-text-note
+	font-size 1.6em
+	color $greyColor
+
+/* Слева */
+.content__item-side-text-title-red
+	color $redColor
+/* /Слева */
+
+/* Справа */
+.content__item-side-text-title-green
+	color $greenColor
+/* /Справа */
+
+/* /Боковой блок */
+
+/* Пузыри Параллакс */
+.parallax-container
+	position absolute
+	z-index -1
+	top 0
+	right 0
+	left 0
+	bottom 0
+	overflow hidden
+	width 100%
+	height 100%
+
+.ball
+	position absolute
+	z-index -1
+	background-repeat no-repeat
+	background-position bottom center
+	background-size auto
+.ball0
+	right -500px
+	bottom -950px
+	width 1920px
+	height 1920px
+	background-image url('../../images/ball0.png')
+.ball1
+	right -500px
+	bottom 1000px
+	width 1822px
+	height 1822px
+	background-image url('../../images/ball1.png')
+.ball2
+	right -800px
+	bottom 2000px
+	width 1718px
+	height 1718px
+	background-image url('../../images/ball2.png')
+.ball3
+	left -600px
+	bottom 3000px
+	width 1523px
+	height 1523px
+	background-image url('../../images/ball3.png')
+.ball4
+	right -200px
+	bottom 4000px
+	width 1283px
+	height 1283px
+	background-image url('../../images/ball4.png')
+.ball5
+	left -500px
+	bottom -1000px
+	width 1196px
+	height 1196px
+	background-image url('../../images/ball5.png')
+.ball6
+	right 800px
+	bottom 3500px
+	width 1136px
+	height 1136px
+	background-image url('../../images/ball6.png')
+.ball7
+	right -200px
+	bottom 2500px
+	width 1011px
+	height 1011px
+	background-image url('../../images/ball7.png')
+.ball8
+	right -100px
+	bottom 1500px
+	width 686px
+	height 686px
+	background-image url('../../images/ball8.png')
+.ball9
+	left 50px
+	bottom 1000px
+	width 739px
+	height 739px
+	background-image url('../../images/ball9.png')
+.ball10
+	right 200px
+	bottom 2000px
+	width 417px
+	height 417px
+	background-image url('../../images/ball10.png')
+.ball11
+	left 400px
+	bottom 1500px
+	width 282px
+	height 282px
+	background-image url('../../images/ball11.png')
+
+/* /Пузыри Параллакс */
+
+/* Плавное появление блоков */
+.hidden
+	opacity 1
+
+.visible
+	opacity 0
+/* /Плавное появление блоков */
+
+/* Адаптация */
+
+@media screen and (max-width 1500px)
+	.content__item-side-text-txt
+		font-size 2vw
+
+@media screen and (max-width 1050px)
+	.content__item
+		font-size 1.2vw
+	.content__item-center-span
+		padding 0 7vw
+
+@media screen and (max-width: 730px)
+	.header__logo-img
+		width 60%
+	.header__title
+		font-size 24px
+		line-height 30px
+	.header__bottom-title
+		padding 33px 40px
+		font-size 22px
+		line-height 33px
+
+	.footer-inner__text-top,
+	.footer-inner__text-bottom,
+	.footer-note
+		font-size 22px
+		line-height 30px
+
+	.footer-inner
+		margin-top 150px
+
+@media screen and (max-width: 350px)
+	.footer-download__btn-txt
+		padding 0 10px
+/* /Адаптация */
+
+/* /Контент */

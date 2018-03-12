@@ -1,0 +1,136 @@
+mixin page()
+	+b('body').page&attributes(attributes)
+		block
+		.content.site-width.inn-padd
+			//- Миксин разделителя
+			mixin separ
+				.content__separator.revealator-slideup
+					.col__dotted.col__dotted-separator
+			+separ
+			.content__item
+				// Слева
+				mixin contentLeft(imgSrc, title, txt, note)
+					.content__item-side.revealator-slideup.revealator-delay3
+						img.content__item-side-img(src= imgSrc)
+						.content__item-side-text
+							.content__item-side-text-title.content__item-side-text-title-red= title
+							.content__item-side-text-txt= txt
+							.content__item-side-text-note= note
+				+contentLeft('images/1water-eco__bad.png', '250-400', 'литров воды')
+							
+				// Центр
+				mixin contentCenter(centerImg, centTxt)
+					.content__item-center
+						.content__item-center-left
+							img.content__item-center-left-img(src='images/left-round.png')
+						.content__item-center-cent
+							img.content__item-center-cent-img(src= centerImg)
+							.content__item-center-cent-txt
+								span.content__item-center-span= centTxt
+						.content__item-center-right
+							img.content__item-center-right-img(src='images/right-round.png')
+				+contentCenter('images/1water-eco__center.png', 'Экономия воды и забота о природе')
+							
+				// Справа
+				mixin contentRight(imgSrc, title, txt, note)
+					.content__item-side.revealator-slideup
+						img.content__item-side-img(src= imgSrc)
+						.content__item-side-text
+							.content__item-side-text-title.content__item-side-text-title-green= title
+							.content__item-side-text-txt= txt
+							.content__item-side-text-note= note
+				+contentRight('images/1water-eco__good.png', '12,5', 'литров воды')
+			+separ
+			
+			.content__item
+				+contentLeft('images/2time__bad.png', '110', 'минут', '(мытье и сушка полотенцем)')
+				+contentCenter('images/2time__center.png', 'Больше свободного времени')
+				+contentRight('images/2time__good.png', '15', 'минут', '(загрузка и выгрузка посуды)')
+			+separ
+			
+			.content__item
+				+contentLeft('images/3hands__bad.png', '', 'контакт с моющими средствами')
+				+contentCenter('images/3hands__center.png', 'Здоровье и красота рук')
+				+contentRight('images/3hands__good.png', '', 'бесконтактная мойка')
+			+separ
+			
+			.content__item.celsium
+				.content__item-side.revealator-slideup.revealator-delay3
+					img.content__item-side-img(src='images/4temp__bad.png')
+					.content__item-side-text
+						.content__item-side-text-title.content__item-side-text-title-red MAX 39 &deg;C
+						.content__item-side-text-txt низкая температура воды
+				+contentCenter('images/4temp__center.png', 'Защита от бактерий')
+				.content__item-side.revealator-slideup
+					img.content__item-side-img(src='images/4temp__good.png')
+					.content__item-side-text
+						.content__item-side-text-title.content__item-side-text-title-green ~70 &deg;C
+						.content__item-side-text-txt высокая температура воды
+			+separ
+			
+			.content__item
+				+contentLeft('images/5better__bad.png', 'НЕТ', 'загрязнения остаются')
+				+contentCenter('images/5better__center.png', 'Лучший результат мытья')
+				+contentRight('images/5better__good.png', 'ДА', 'загрязнения отмываются')
+			+separ
+			
+			.content__item
+				+contentLeft('images/6life__bad.png', '', 'мойка с применением абразивных моющих средств')
+				+contentCenter('images/6life__center.png', 'Продление жизни посуды')
+				+contentRight('images/6life__good.png', '', 'бесконтактная мойка за счет струи воды')
+			+separ
+			
+			.content__item
+				+contentLeft('images/7temp__bad.png', '', 'мойка холодной водой')
+				+contentCenter('images/7temp__center.png', 'Отключили горячую воду?')
+				+contentRight('images/7temp__good.png', '', 'автоматический нагрев воды')
+			+separ
+			
+			.content__item.content__item_custom
+				.content__item-side.revealator-slideup
+					img.content__item-side-img(src='images/8sredstva__bad.png')
+					.content__item-side-text
+						.content__item-side-text-title
+						.content__item-side-text-txt обычное моющее средство для посуды и губка
+				//- +contentLeft('images/8sredstva__bad.png', '', 'обычное моющее средство для посуды и губка')
+				+contentCenter('images/8sredstva__center.png', 'Моющие средства и материалы')
+				.content__item-side.revealator-slideup.revealator-delay3
+					img.content__item-side-img(src='images/8sredstva__good.png')
+					.content__item-side-text
+						.content__item-side-text-title
+						.content__item-side-text-txt специальные моющие средства
+				//- +contentRight('images/8sredstva__good.png', '', 'специальные моющие средства')
+			+separ
+			
+			.content__item.content__item_custom
+				.content__item-side.revealator-slideup
+					img.content__item-side-img(src='images/9posuda__bad.png')
+					.content__item-side-text
+						.content__item-side-text-title
+						.content__item-side-text-txt можно мыть любую посуду
+				//- +contentLeft('images/9posuda__bad.png', '', 'можно мыть любую посуду')
+				+contentCenter('images/9posuda__center.png', 'Посуда, пригодная для мытья')
+				//- +contentRight('images/9posuda__good.png', '', 'имеются ограничения')
+				.content__item-side.revealator-slideup.revealator-delay3
+					img.content__item-side-img(src='images/9posuda__good.png')
+					.content__item-side-text
+						.content__item-side-text-title
+						.content__item-side-text-txt имеются ограничения
+			//- Поменять изображения последних двух блоков
+			script.
+				$('.content__item_custom').find('.content__item-center-left img').attr('src', 'images/loop-yes-left.png');
+				$('.content__item_custom').find('.content__item-center-right img').attr('src', 'images/loop-no-right.png');
+		.parallax-container#parallax_container
+			// Пузыри Параллакс
+			.ball0.ball(data-depth='0.2' data-type='parallax')
+			.ball1.ball(data-depth='0.2' data-type='parallax')
+			.ball2.ball(data-depth='0.3' data-type='parallax')
+			.ball3.ball(data-depth='0.3' data-type='parallax')
+			.ball4.ball(data-depth='0.4' data-type='parallax')
+			.ball5.ball(data-depth='0.4' data-type='parallax')
+			.ball6.ball(data-depth='0.5' data-type='parallax')
+			.ball7.ball(data-depth='0.5' data-type='parallax')
+			.ball8.ball(data-depth='0.6' data-type='parallax')
+			.ball9.ball(data-depth='0.6' data-type='parallax')
+			.ball10.ball(data-depth='0.7' data-type='parallax')
+			.ball11.ball(data-depth='0.7' data-type='parallax')

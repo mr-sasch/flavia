@@ -1,0 +1,149 @@
+/* Footer */
+.footer
+	display block
+
+.footer-inner
+	position relative
+	margin-top 250px
+	text-align center
+	background-color #c0e4f6
+
+/* Верхний текст */
+.footer-inner__text-top
+	position relative
+	z-index 10
+	font-size 34px
+	line-height 40px
+	color $greyColor
+/* /Верхний текст */
+
+/* Блок с изображениями */
+.footer-inner__images
+	position relative
+	z-index 10
+	margin auto
+	margin-top 40px
+	padding 0 170px
+	display flex
+	flex-direction row
+	max-width 1350px
+	justify-content space-between
+	background-color #2780bb
+	border-radius 500px
+
+.footer-inner__images-item
+	position relative
+	margin 35px 0
+	align-items center
+
+.footer-inner__image-item-image
+	margin-bottom 50px
+	display flex
+	flex-direction column
+	justify-content center
+	height 73%
+
+.footer-inner__images-item-txt
+	position absolute
+	left 50%
+	bottom 0
+	width 400px
+	transform translateX(-50%)
+	font-size 30px
+	color #fff
+
+/* /Блок с изображениями */
+
+/* Нижний текст */
+.footer-inner__text-bottom
+	padding 56px 0
+	font-size 34px
+	line-height 40px
+	color $greenColor
+/* /Нижний текст */
+
+/* Примечание */
+.footer-note
+	padding 34px 0
+	font-size 30px
+	text-align center
+	color $greyColor
+
+/* /Примечание */
+
+/* Скачать макеты */
+.footer-download
+	padding 25px 10px
+
+	background-color #d5edf9
+
+/* Кнопка Скачать макеты */
+.footer-download__btn
+	margin auto
+	background-color #0069aa
+	border-radius 10px
+	align-items center
+	padding 20px 8px
+	display flex
+	justify-content center
+	width 100%
+	max-width 367px
+	height 60px
+
+a.footer-download__btn
+	text-decoration none
+	color #fff
+	transition .2s ease
+
+a.footer-download__btn:hover
+	box-shadow 0 0 7px 0 grey
+
+.footer-download__btn-txt
+	padding 0 27px
+/* /Кнопка Скачать макеты */
+
+/* Каталог FLAVIA */
+.footer-download__btn-small
+	margin-top 20px
+	padding 0
+	max-width 170px
+	height 38px
+
+/* /Каталог FLAVIA */
+
+/* /Скачать макеты */
+
+
+/* Бэкграунд круглый */
+.header__bg.footer__bg
+	position absolute
+	z-index 5
+	top -70px
+	width 100%
+	transform rotate(180deg)
+	background-color transparent
+
+
+/* Адаптация */
+@media screen and (max-width 1200px)
+	.footer-inner__images-item-txt
+		font-size 24px
+
+@media screen and (max-width 1060px)
+	.footer-inner__images-item-txt
+		left inherit
+		width inherit
+		transform inherit
+	.footer-inner__text-top
+		padding-top 30px
+	.footer-inner__images
+		justify-content space-around
+		flex-wrap wrap
+		margin 50px 10px 0
+		padding 0 100px
+	.footer-inner__image-item-image
+		margin-bottom 70px
+
+/* /Адаптация */
+
+/* /Footer */
